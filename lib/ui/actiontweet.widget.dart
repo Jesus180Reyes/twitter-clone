@@ -6,12 +6,9 @@ class ActionsTweetWidget extends StatelessWidget {
 
   const ActionsTweetWidget({
     Key? key,
-    required this.size,
     required this.item,
     required this.icon,
   }) : super(key: key);
-
-  final Size size;
 
   @override
   Widget build(BuildContext context) {

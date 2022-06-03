@@ -16,20 +16,23 @@ class HomePage extends StatelessWidget {
         onPressed: () {},
         child: const Icon(Icons.add),
       ),
-      appBar: customAppbar(),
+      appBar: customAppbar(context),
       body: const ListItems(),
     );
   }
 
-  AppBar customAppbar() {
+  AppBar customAppbar(context) {
     return AppBar(
       centerTitle: true,
       title: const Icon(FontAwesomeIcons.twitter, color: Colors.blueAccent),
-      leading: const Padding(
-        padding: EdgeInsets.all(8.0),
-        child: CircleAvatar(
-          backgroundImage: NetworkImage(
-            'https://lastfm.freetls.fastly.net/i/u/ar0/d01a2fa285488359147cac52d66f4a3e',
+      leading: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: GestureDetector(
+          onTap: () => Navigator.pushNamed(context, 'profile'),
+          child: const CircleAvatar(
+            backgroundImage: NetworkImage(
+              'https://lastfm.freetls.fastly.net/i/u/ar0/d01a2fa285488359147cac52d66f4a3e',
+            ),
           ),
         ),
       ),
@@ -75,13 +78,19 @@ class ListTwitterItems extends StatelessWidget {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          CircleAvatar(
-            radius: 27,
-            // minRadius: 20,
-            backgroundImage: NetworkImage(item.imageUrl),
+          GestureDetector(
+            onTap: () => Navigator.pushNamed(context, 'profile'),
+            child: CircleAvatar(
+              radius: 27,
+              // minRadius: 20,
+              backgroundImage: NetworkImage(item.imageUrl),
+            ),
           ),
-          const SizedBox(width: 15),
-          TweetUIWidget(item: item, size: size),
+          const SizedBox(width: 5),
+          GestureDetector(
+            onTap: () => Navigator.pushNamed(context, 'details'),
+            child: TweetUIWidget(item: item, size: size),
+          ),
           Divider(thickness: 3, color: Colors.grey[200]),
         ],
       ),
