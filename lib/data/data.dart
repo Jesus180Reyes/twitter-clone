@@ -28,12 +28,26 @@ final List<TwitterItem> listTwitterItem = [
     isImage: 'https://c.tenor.com/7UbBNdn7MvkAAAAd/messi.gif',
   ),
   TwitterItem(
+    id: '6',
+    description:
+        '¿Cuál es el último animal que subió al arca de Noé? El del-fin.',
+    imageUrl:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-O6RxdxvT6zRrN92202IXN1RUA7TSHteOZw&usqp=CAU',
+    name: 'Dave Linus',
+    createdAt: DateTime.now(),
+    likes: 20,
+    comments: 2,
+    retweets: 0,
+    views: 120,
+  ),
+  TwitterItem(
       id: '3',
       description:
           'Hola chicos y chicas espero que esteis bien el dia de hoy, solo para informarles que estoy en directo por mi canal de twich asi que dale click al enlace y nos vemos por alla! Un saludo. ',
       imageUrl:
           'https://cronicaglobal.elespanol.com/uploads/s1/13/92/01/21/el-youtuber-the-grefg-en-el-hormiguero-atresmedia.jpeg',
       name: 'The Grefg',
+      isUrl: 'https://www.twitch.tv/thegrefg',
       createdAt: DateTime.now(),
       likes: 34435,
       comments: 300,
@@ -55,5 +69,17 @@ final List<TwitterItem> listTwitterItem = [
     views: 14000,
     isImage:
         'https://cronicaglobal.elespanol.com/uploads/s1/13/92/01/21/el-youtuber-the-grefg-en-el-hormiguero-atresmedia.jpeg',
+  ),
+  TwitterItem(
+    id: '5',
+    description: 'Buy Shiba Inu',
+    imageUrl:
+        'https://ichef.bbci.co.uk/news/640/cpsprodpb/B4EC/production/_116361364_tes1.png',
+    name: 'Elon Musk',
+    createdAt: DateTime.now(),
+    likes: 343553,
+    comments: 435,
+    retweets: 897867,
+    views: 1200345,
   ),
 ];

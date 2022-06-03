@@ -5,6 +5,7 @@ class TwitterItem {
   final String name;
   final String? isImage;
   final String? isvideo;
+  final String? isUrl;
   final DateTime createdAt;
   final int likes;
   final int comments;
@@ -12,6 +13,7 @@ class TwitterItem {
   final int views;
 
   TwitterItem({
+    this.isUrl,
     required this.id,
     required this.description,
     required this.imageUrl,
